@@ -80,18 +80,21 @@ h1 {
   font-family: Poppins-Bold;
   font-size: 36px;
   margin: 12px 0px;
+  color: #2E2B41;
 }
 
 h2 {
   font-family: Poppins-SemiBold;
   font-size: 24px;
   margin: 10px 0px;
+  color: #2E2B41;
 }
 
 h3 {
   font-family: Poppins-SemiBoldItalic;
   font-size: 18px;
   margin: 8px 0px;
+  color: #2E2B41;
 }
 
 p,
@@ -100,7 +103,7 @@ a {
   font-family: Poppins-Regular;
   font-size: 14px;
   text-decoration: none;
-  color: black;
+  color: #2E2B41;
   margin: 6px 0px;
 }
 .bold {
@@ -110,6 +113,7 @@ a {
 label {
   font-family: Poppins-BoldItalic;
   font-size: 13px;
+  color: #2E2B41;
 }
 
 /* END OF TEXT */
@@ -128,7 +132,7 @@ article {
 }
 
 button {
-  font-family: Poppins-Regular;
+  font-family: Poppins-Bold;
   border-width: 0px;
   border-radius: 25px;
   padding: 5px 15px;
@@ -136,28 +140,28 @@ button {
   cursor: pointer;
   background-color: #8672FF;
   color: #f7f7f7;
-  transition: all 0.3s ease-in-out;
+  transition: all 150ms ease;
   width: 150px;
 }
 
 button:hover {
-  font-family: Poppins-Bold;
+  background-color: #2E2B41;
   /* font-weight: 700; */
 }
 
 .button-black {
-  font-family: Poppins-Regular;
+  font-family: Poppins-Bold;
   width: 250px;
   border-width: 0px;
   border-radius: 25px;
   padding: 10px 15px;
   margin: 5px 0px;
   cursor: pointer;
-  background-color: #161616;
+  background-color: #2E2B41;
   color: #f7f7f7;
 }
 .button-black:hover {
-  font-family: Poppins-Bold;
+  background-color: #8672FF;
 }
 
 .button-article{
@@ -282,41 +286,12 @@ section {
 }
 .nav-header:hover{
   color:#8672FF;
-  background-color: rgba(208, 162, 251, 0.45);
+  background-color: rgba(227, 202, 250, 0.267);
   border-radius: 100px;
-  font-weight: 900;
 }
 
 .pict{
   height: 250px;
   width: auto;
   border-radius: 10px;
-}
-
-/* Form Control */
-
-.form-control {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  position: relative;
-}
-
-.form-control.success input {
-  border-color: var(--success-color);
-}
-
-.form-control.error input {
-  border-color: var(--error-color);
-}
-
-.form-control small {
-  color: var(--error-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.form-control.error small {
-  visibility: visible;
 }

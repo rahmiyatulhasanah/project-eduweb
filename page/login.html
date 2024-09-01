@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
-    <link rel="icon" type="image/x-icon" href="/img/E.svg">
+    <link rel="icon" type="image/x-icon" href="/img/E.svg" />
+    <script type="text/javascript" src="../js/validation.js" defer></script>
     <style>
       .flex-display {
         display: flex;
@@ -13,10 +14,23 @@
         align-items: center;
         height: 100vh;
         /* margin: 400px; */
+        background-image: url("/img/background.jpg");
+        background-size: cover;
+        background-position: center;
       }
 
       .form-register {
-        /* width: 40%; */
+        width: 40%;
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        /* height: 100vh; */
+        /* width: max(40%, 600px); */
+        padding: 30px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
 
       .flex-center {
@@ -25,42 +39,138 @@
         align-items: center;
         justify-content: center;
       }
+
+      .buttondibawah {
+        font-family: Poppins-Bold;
+        background-color: #f7f7f7;
+        color: #2e2b41;
+        font-size: 12px;
+        width: 100%;
+        transition: 150ms ease;
+        text-align: center;
+      }
+
+      .buttondibawah:hover {
+        background-color: #f7f7f7;
+        color: #8672ff;
+        justify-items: center;
+      }
+
+      form {
+        width: 400px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      form > div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      form label {
+        flex-shrink: 0;
+        height: 50px;
+        width: 50px;
+        background-color: #8672ff;
+        fill: #f7f7f7;
+        color: #f7f7f7;
+        border-radius: 10px 0 0 10px;
+        display: flex;
+        margin: 14px 0px;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+      form input {
+        box-sizing: border-box;
+        flex-grow: 1;
+        min-width: 0;
+        height: 50px;
+        padding: 14px;
+        margin: 14px 0px;
+        border-radius: 0 10px 10px 0;
+        border: 2px solid #f3f0ff;
+        border-left: none;
+        background-color: #f3f0ff;
+        transition: 150ms ease;
+      }
+      form input:hover {
+        border-color: #8672ff;
+      }
+      form input:focus {
+        outline: none;
+        border-color: #2e2b41;
+      }
+      div:has(input:focus) > label {
+        background-color: #2e2b41;
+      }
+      form input::placeholder {
+        color: #a29eb5;
+      }
+      /* @media (max-width: 1100px) {
+        .wrapper {
+          width: min(600px, 100%);
+          border-radius: 0;
+        }
+      } */
+      form div.incorrect label {
+        background-color: #f06272;
+      }
+      form div.incorrect input {
+        border-color: #f06272;
+      }
+      #error-message {
+        color: #f06272;
+      }
     </style>
   </head>
 
-  <body class="flex-display">
+  <body class="flex-display" style="margin: 40px">
     <header></header>
-    
-    <section class="flex-center">
-      <form>
-        <h1>Login</h1>
-        <div style="width: 100%" class="form-control">
-          <label for="email">Email</label><br />
-          <input id="email" placeholder="example@mail.com" type="email" /><br />
-          <small>Error message</small>
+
+    <section class="form-register">
+      <h1>Login</h1>
+      <p id="error-message"></p>
+      <form class="flex-center" id="form">
+        <div style="width: 100%">
+          <label for="email"><span>@</span></label>
+          <input type="email" name="email" id="email-input" placeholder="Email">
         </div>
 
-        <div style="width: 100%" class="form-control">
-          <label for="password">Password</label><br />
+        <div style="width: 100%">
+          <label for="password-input"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path
+                d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"
+              /></svg
+          ></label>
           <input
-            id="password"
-            placeholder="Buat password yang kuat!"
-            type="password"
-          /><br />
-          <small>Error message</small>
+          type="password"
+          name="password"
+            id="password-input"
+            placeholder="Password"
+          />
         </div>
 
-        <button type="submit" class="button-black">Login!</button>
+        <button type="submit" class="button-black">Masuk</button>
+        <a
+          class="buttondibawah"
+          href="../page/register.html"
+        >
+          Tidak punya akun? Daftar!
+        </a>
       </form>
-      <button
-        style="width:100%;background-color: #f7f7f7; color: black; font-size: 12px"
-        onclick="window.location.href='../page/register.html';"
-      >
-        Tidak punya akun? Daftar!
-      </button>
     </section>
 
     <script src="/js/header_footer.js"></script>
-    <script src="/js/login.js" type="module"></script>
   </body>
 </html>
