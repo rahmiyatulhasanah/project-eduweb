@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/E.svg">
+    <title>Hubungi Kami</title>
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+       <!-- Kontak -->
+       <section id="kontak">
+        <img src="../img/E.svg" alt="Edura" style="border-radius: 0px" />
+
+        <div class="grid-col-2" style="gap: 100px">
+          <form>
+            <h3>Kirimi Kami Pesan!</h3>
+
+            <div class="grid-col-2">
+              <div>
+                <label for="nama">Nama</label>
+                <input id="nama" placeholder="Nama" />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="example@mail.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <label for="topik">Topik</label><br />
+            <select id="topik" name="topik" required>
+              <option value="Software Engineer">Software Engineer</option>
+              <option value="Web Developer">Web Developer</option>
+              <option value="Game Developer">Game Developer</option>
+              <option value="AI Scientist">AI Scientist</option>
+              <option value="Cyber Security">Cyber Security</option>
+              <option value="Lainnya">Lainnya</option></select
+            ><br />
+
+            <label for="pesan">Pesan</label><br />
+            <textarea id="pesan" rows="4" required></textarea><br />
+
+            <input type="submit" value="Kirim!" class="button-black" />
+          </form>
+
+          <div>
+            <!-- Alamat dan Kontak -->
+            <div id="kontak-contact-info">
+              <h3>Kontak Kami</h3>
+              <p>Jl. Pendidikan No. 123, Jakarta, Indonesia</p>
+              <p>Telepon: <a href="tel:+021123-4567">(021) 123-4567</a></p>
+              <p>
+                Email: <a href="mailto:contact@edura.com">contact@edura.com</a>
+              </p>
+            </div>
+
+            <!-- Media Sosial -->
+            <div id="kontak-social-media">
+              <h3>Media Sosial</h3>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="../img/mdi_instagram.svg" alt="instagram" width="30px" />
+              </a>
+
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="../img/mdi_youtube.svg" alt="youtube" width="34px" />
+              </a>
+
+              <a
+                href="https://www.x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="../img/mdi_twitter.svg" alt="twitter" width="30" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <script src="../js/header_footer.js"></script>
+  </body>
+</html>

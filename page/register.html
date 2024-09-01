@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Akun</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/E.svg">
+    <style>
+      .flex-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* margin: 400px; */
+      }
+
+      .form-register {
+        width: 40%;
+      }
+
+      .flex-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body class="flex-display">
+    <!-- header -->
+    <header></header>
+    
+    <section class="form-register">
+      <h1>Daftar Akun</h1>
+      <form class="flex-center" id="form">
+        <div style="width: 100%" class="form-control">
+          <label for="nama">Nama</label>
+          <input id="nama" placeholder="Nama" type="text" required />
+          <small>Error message</small>
+        </div>
+
+        <div style="width: 100%" class="form-control">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            placeholder="example@mail.com"
+            type="email"
+            required
+          />
+          <small>Error message</small>
+        </div>
+
+        <div class="grid-col-2">
+          <div class="form-control">
+            <label for="password">Password</label><br />
+            <input
+              id="password"
+              placeholder="Buat password yang kuat!"
+              type="password"
+              required
+            /><br />
+            <small>Error message</small>
+          </div>
+
+          <div class="form-control">
+            <label for="password2">Ulangi Password</label><br />
+            <input id="password2" placeholder="Masukkan Kembali Passwordmu!" type="password" required /><br />
+            <small>Error message</small>
+          </div>
+        </div>
+
+        <button type="submit" class="button-black">Daftar!</button>
+      </form>
+      <button
+        style="background-color: #f7f7f7; color: black; font-size: 12px; width: 100%;"
+        onclick="window.location.href='../page/login.html';"
+      >
+        Sudah punya akun? Masuk!
+      </button>
+    </section>
+    
+    <script src="../js/header_footer.js"></script>
+    <script src="../js/register.js"></script>
+  </body>
+</html>

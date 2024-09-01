@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/E.svg">
+    <style>
+      .flex-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* margin: 400px; */
+      }
+
+      .form-register {
+        /* width: 40%; */
+      }
+
+      .flex-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body class="flex-display">
+    <header></header>
+    
+    <section class="flex-center">
+      <form>
+        <h1>Login</h1>
+        <div style="width: 100%" class="form-control">
+          <label for="email">Email</label><br />
+          <input id="email" placeholder="example@mail.com" type="email" /><br />
+          <small>Error message</small>
+        </div>
+
+        <div style="width: 100%" class="form-control">
+          <label for="password">Password</label><br />
+          <input
+            id="password"
+            placeholder="Buat password yang kuat!"
+            type="password"
+          /><br />
+          <small>Error message</small>
+        </div>
+
+        <button type="submit" class="button-black">Login!</button>
+      </form>
+      <button
+        style="width:100%;background-color: #f7f7f7; color: black; font-size: 12px"
+        onclick="window.location.href='../page/register.html';"
+      >
+        Tidak punya akun? Daftar!
+      </button>
+    </section>
+
+    <script src="/js/header_footer.js"></script>
+    <script src="/js/login.js" type="module"></script>
+  </body>
+</html>
