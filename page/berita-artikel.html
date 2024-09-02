@@ -5,85 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Berita dan Artikel</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
-    <link rel="icon" type="image/x-icon" href="/img/E.svg">
+    <link rel="icon" type="image/x-icon" href="/img/E.svg" />
+
+    <style>
+      .grid-col-2 > div {
+        grid-column: span 2; /* Span across two columns */
+        /* display: flex; */
+        /* justify-content: center; */
+        gap: 10px;
+      }
+    </style>
   </head>
 
-  <body style="background-color: #8672FF;">
+  <body style="background-color: #8672ff">
     <header></header>
 
     <main>
       <!-- Berita dan Artikel -->
-      <section id="berita">
-        <h1>Berita dan Artikel</h1>
-        <div class="grid-col-2">
-          <article>
-            <img src="../img/coding 1.webp" alt="coding" class="pict" />
-            <h2>Kenapa Belajar Coding Itu Gak Sesulit yang Kamu Kira</h2>
-            <p>
-              Belajar coding sering kali dianggap menakutkan, padahal sebenarnya
-              gak serumit itu, lho! Di artikel ini, kita bakal bahas kenapa
-              coding bisa jadi lebih mudah dan menyenangkan, terutama kalau kamu
-              belajar dengan cara yang tepat. Yuk, intip tips dan trik buat kamu
-              yang mau mulai belajar coding tanpa rasa takut!
-            </p>
-            <button class="button-article">Baca Selengkapnya</button>
-          </article>
-
-          <article>
-            <img src="../img/framework.webp" alt="framework" class="pict" />
-            <h2>
-              Rahasia Sukses Membangun Website yang Bikin Pengunjung Betah
-            </h2>
-            <p>
-              Membangun website itu bukan cuma soal tampilan yang keren. Ada
-              banyak faktor lain yang bikin pengunjung betah dan terus balik
-              lagi. Dari kecepatan loading, navigasi yang gampang, sampai konten
-              yang relevan, semua kita bahas di sini. Buat kamu yang mau jadi
-              web developer, artikel ini wajib banget dibaca!
-            </p>
-            <button class="button-article">Baca Selengkapnya</button>
-          </article>
-
-          <article>
-            <img src="../img/game.webp" alt="coding" class="pict" />
-            <h2>Kenapa Game Development Bisa Jadi Karir Impianmu</h2>
-            <p>
-              Kamu suka main game? Gimana kalau hobi kamu yang satu ini bisa
-              jadi karir? Di artikel ini, kita akan ngobrolin tentang peluang
-              karir di dunia game development. Mulai dari ide dasar sampai
-              peluncuran game ke pasar, ternyata bikin game itu seru banget dan
-              bisa jadi jalan karir yang menjanjikan!
-            </p>
-            <button class="button-article">Baca Selengkapnya</button>
-          </article>
-
-          <article>
-            <img src="../img/AI.webp" alt="coding" class="pict" />
-            <h2>Apa Itu AI dan Kenapa AI Penting Buat Masa Depan Kita?</h2>
-            <p>
-              AI alias kecerdasan buatan lagi naik daun banget nih! Tapi, apa
-              sih sebenarnya AI itu? Dan kenapa AI penting banget buat masa
-              depan kita? Artikel ini akan mengupas tuntas tentang AI dengan
-              bahasa yang mudah dimengerti, plus contoh-contoh keren gimana AI
-              sudah mulai mempengaruhi kehidupan kita sehari-hari.
-            </p>
-            <button class="button-article">Baca Selengkapnya</button>
-          </article>
-
-          <article>
-            <img src="../img/cyber.webp" alt="coding" class="pict" />
-            <h2>
-              5 Langkah Gampang Buat Lindungi Data Pribadi Kamu di Internet
-            </h2>
-            <p>
-              Saat ini, menjaga keamanan data pribadi itu penting banget. Tapi,
-              gimana caranya? Tenang, gak perlu panik! Di artikel ini, kamu
-              bakal dapet 5 langkah simpel buat melindungi data pribadi kamu
-              dari ancaman di dunia maya. Yuk, baca dan amankan datamu sekarang
-              juga!
-            </p>
-            <button class="button-article">Baca Selengkapnya</button>
-          </article>
+      <section id="article-container" class="grid-col-2">
+        <div style="padding: 0px 20px">
+          <button id="show-all">Semua</button>
+          <button id="show-article">Artikel</button>
+          <button id="show-news">Berita</button>
         </div>
       </section>
     </main>
@@ -92,5 +35,99 @@
     <footer></footer>
 
     <script src="/js/header_footer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const articleContainer = document.getElementById("article-container");
+
+        fetch("../page/articles.json")
+          .then((res) => res.json())
+          .then((articles) => {
+            function articleHTML(article) {
+              return `
+          <article data-label="${article.label}">
+            <p
+              style="
+                border-radius: 10px;
+                padding: 5px 15px;
+                margin: 10px 0px;
+                width: 25%;
+                border: 1px solid #8672ff;
+                color: #8672ff;
+                font-size: 12px;
+                font-style: italic;
+              "
+            >
+            ${article.label}
+            </p>
+            <img src="${article.img}" alt="${article.alt}" class="pict" />
+            <h2>${article.title}</h2>
+            <p>${article.content}</p>
+            <button class="button-article">Baca Selengkapnya</button></br>
+          </article>
+        `;
+            }
+
+            function displayArticles(filterLabel) {
+              // Clear the container and re-add the buttons
+              articleContainer.innerHTML = `
+          <div>
+            <button id="show-all">Semua</button>
+            <button id="show-articles">Artikel</button>
+            <button id="show-news">Berita</button>
+          </div>
+        `;
+
+              articles.forEach((article) => {
+                // If no filter is applied, or the article matches the filter, display it
+                if (!filterLabel || article.label === filterLabel) {
+                  articleContainer.innerHTML += articleHTML(article);
+                }
+              });
+
+              // Reattach event listeners after content is re-rendered
+              addEventListeners();
+            }
+
+            function addEventListeners() {
+              document
+                .getElementById("show-all")
+                .addEventListener("click", () => displayArticles());
+              document
+                .getElementById("show-articles")
+                .addEventListener("click", () => displayArticles("Artikel"));
+              document
+                .getElementById("show-news")
+                .addEventListener("click", () => displayArticles("Berita"));
+            }
+
+            // Display all articles by default
+            displayArticles();
+          })
+          .catch((error) => console.error("Error fetching articles:", error));
+      });
+    </script>
+    <!-- <script>
+      const articleContainer = document.getElementById("article-container");
+
+      fetch("../page/articles.json")
+        .then((res) => res.json())
+        .then((article) => {
+          function articleHTML(article) {
+            return `
+              <article>
+                <img src="${article.img}" alt="${article.alt}" class="pict" />
+                <h2>${article.title}</h2>
+                <p>${article.content}</p>
+                <button class="button-article">Baca Selengkapnya</button>
+              </article>
+            `;
+          }
+
+          article.forEach((article) => {
+            articleContainer.innerHTML += articleHTML(article);
+          });
+        });
+      // .catch(error => console.error('Error fetching the articles:', error));
+    </script> -->
   </body>
 </html>
