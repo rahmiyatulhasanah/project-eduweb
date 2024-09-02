@@ -55,8 +55,8 @@ body {
 }
 
 .header img {
-  width: 30px; /* Ukuran logo */
-  border-radius: 0; /* Menghilangkan border-radius jika ada */
+  width: 30px;
+  border-radius: 0;
 }
 
 main {
