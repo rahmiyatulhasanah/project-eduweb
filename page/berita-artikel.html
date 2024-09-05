@@ -9,7 +9,7 @@
 
     <style>
       .grid-col-2 > div {
-        grid-column: span 2; /* Span across two columns */
+        grid-column: span 2;
         /* display: flex; */
         /* justify-content: center; */
         gap: 10px;
@@ -78,13 +78,11 @@
         `;
 
               articles.forEach((article) => {
-                // If no filter is applied, or the article matches the filter, display it
                 if (!filterLabel || article.label === filterLabel) {
                   articleContainer.innerHTML += articleHTML(article);
                 }
               });
 
-              // Reattach event listeners after content is re-rendered
               addEventListeners();
             }
 
@@ -100,34 +98,10 @@
                 .addEventListener("click", () => displayArticles("Berita"));
             }
 
-            // Display all articles by default
             displayArticles();
           })
           .catch((error) => console.error("Error fetching articles:", error));
       });
     </script>
-    <!-- <script>
-      const articleContainer = document.getElementById("article-container");
-
-      fetch("../page/articles.json")
-        .then((res) => res.json())
-        .then((article) => {
-          function articleHTML(article) {
-            return `
-              <article>
-                <img src="${article.img}" alt="${article.alt}" class="pict" />
-                <h2>${article.title}</h2>
-                <p>${article.content}</p>
-                <button class="button-article">Baca Selengkapnya</button>
-              </article>
-            `;
-          }
-
-          article.forEach((article) => {
-            articleContainer.innerHTML += articleHTML(article);
-          });
-        });
-      // .catch(error => console.error('Error fetching the articles:', error));
-    </script> -->
   </body>
 </html>

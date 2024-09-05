@@ -7,10 +7,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edura</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
-    <link rel="icon" type="image/x-icon" href="/img/E.svg">
-    <!-- Memuat file JavaScript -->
+    <link rel="icon" type="image/x-icon" href="/img/E.svg" />
+
+    <style>
+      .stats {
+        padding: 10px 30px;
+        background-color: #f7f7f7;
+        border-radius: 20px;
+      }
+
+      #keunggulan {
+        background-color: #8772ff00;
+        margin: 0px;
+        padding: 0px 100px;
+      }
+
+      .keunggulan-card {
+        padding: 30px 50px;
+      }
+
+      #testimoni-head {
+        background-color: #8772ff00;
+        margin: 0px;
+        padding: 0px 100px;
+      }
+
+      .card-testimoni {
+        position: relative;
+        display: inline-block;
+        background-color: #f7f7f700;
+        background-color: #6a58cf;
+        border-radius: 20px;
+        /* width: 250px; */
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /* cursor: pointer; */
+      }
+
+      .card-testimoni-image {
+        width: auto;
+        height: 350px;
+        bottom: 0;
+        object-fit: cover;
+        border-radius: 10px;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+
+      .card-testimoni::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: linear-gradient(
+          to bottom,
+          rgba(134, 114, 255, 0),
+          rgba(134, 114, 255, 0.6)
+        );
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .card-testimoni:hover .card-testimoni-image {
+        filter: brightness(30%);
+      }
+
+      .card-testimoni-paragraph {
+        position: absolute;
+        bottom: 0;
+        padding: 10px;
+        width: 80%;
+        color: #f7f7f7;
+        z-index: 2;
+      }
+
+      .card-testimoni-paragraph > h1,
+      h2,
+      h3 {
+        color: #f7f7f7;
+      }
+
+      .card-testimoni-paragraph > p {
+        color: #f7f7f700;
+        transition: all 0.3s ease;
+      }
+
+      .card-testimoni:hover .card-testimoni-paragraph > p {
+        color: #f7f7f7;
+      }
+    </style>
   </head>
-  
+
   <body>
     <!-- header -->
     <header></header>
@@ -18,20 +111,38 @@
     <!-- main content -->
     <main>
       <!-- Hero -->
-      <div class="hero" id="profil">
+      <div id="profil">
         <section>
-          <!-- <img src="img/background.webp" alt="background" width="500" /> -->
-          <h1>Edura</h1>
-          <h2>Tingkatkan Skill Digital mu bersama <strong>Edura!</strong></h2>
-          <p>Pilih 5 learning path sesuai kebutuhan industri saat ini!</p>
-          <button onclick="window.open('/page/register.html', '_blank')">
-            Mulai Belajar
-          </button>
-          <button
-          onclick="window.open('/page/informasi-program-pelatihan.html', '_self')"
-          >
-            Lihat Kelas
-          </button>
+          <div>
+            <!-- <img src="img/background.webp" alt="background" width="500" /> -->
+            <h1>Edura</h1>
+            <h2>Tingkatkan Skill Digital mu bersama <strong>Edura!</strong></h2>
+            <p>Pilih 5 learning path sesuai kebutuhan industri saat ini!</p>
+
+            <button onclick="window.open('/page/register.html', '_blank')">
+              Mulai Belajar
+            </button>
+            <button
+              onclick="window.open('/page/informasi-program-pelatihan.html', '_blank')"
+            >
+              Lihat Kelas
+            </button>
+          </div>
+
+          <!-- <div>
+            <img src="../img/student.png" alt="student" loading="lazy"/>
+          </div> -->
+
+          <!-- <div>
+            <button onclick="window.open('/page/register.html', '_blank')">
+              Mulai Belajar
+            </button>
+            <button
+              onclick="window.open('/page/informasi-program-pelatihan.html', '_self')"
+            >
+              Lihat Kelas
+            </button>
+          </div> -->
         </section>
 
         <!-- Statistics Section -->
@@ -41,8 +152,8 @@
             border-style: solid;
             border-width: 1px;
             border-radius: 10px;
-            border-color: #8672FF;
-            background-color: #8672FF;
+            border-color: #8772ff00;
+            background-color: #8772ff00;
             padding: 0px;
           "
         >
@@ -61,15 +172,81 @@
             <p>Ahli</p>
           </div>
         </section>
+
+        <!-- Class Section -->
+        <section
+          class="grid-col-5"
+          style="
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 10px;
+            border-color: #8772ff00;
+            background-color: #8772ff00;
+            padding: 0px;
+          "
+        >
+          <div class="card-class">
+            <h2 class="card-class-name">Software Engineer</h2>
+            <img
+              src="../img/coding 1.webp"
+              alt="Kelas AI"
+              class="card-class-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="card-class">
+            <h2 class="card-class-name">Web Developer</h2>
+            <img
+              src="../img/framework.webp"
+              alt="Kelas AI"
+              class="card-class-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="card-class">
+            <h2 class="card-class-name">Game Developer</h2>
+            <img
+              src="../img/game.webp"
+              alt="Kelas AI"
+              class="card-class-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="card-class">
+            <h2 class="card-class-name">AI Scientist</h2>
+            <img
+              src="../img/AI.webp"
+              alt="Kelas AI"
+              class="card-class-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="card-class">
+            <h2 class="card-class-name">Cyber Security</h2>
+            <img
+              src="../img/cyber.webp"
+              alt="Kelas AI"
+              class="card-class-image"
+              loading="lazy"
+            />
+          </div>
+        </section>
       </div>
 
       <!-- Keunggulan -->
-      <section class="keunggulan">
-        <h1>Kenapa Harus Belajar di</h1>
-        <h1><strong>Edura</strong></h1>
+      <section id="keunggulan">
+        <h1 style="color: #f7f7f7; text-align: center; margin: 50px 0px">
+          Kenapa Harus Belajar di Edura?
+        </h1>
+        <!-- <h1><strong>Edura</strong></h1> -->
 
         <div class="grid-col-2">
-          <article class="unggulan-card">
+          <article class="keunggulan-card">
+            <img src="img/mdi_graph.svg" alt="Kurikulum" loading="lazy" />
             <h2>Kurikulum Terstruktur dan Relevan</h2>
             <p>
               Di Edura, kami gak main-main soal materi belajar. Kurikulum kami
@@ -80,7 +257,8 @@
             </p>
           </article>
 
-          <article class="unggulan-card">
+          <article class="keunggulan-card">
+            <img src="img/mdi_time.svg" alt="Kurikulum" loading="lazy" />
             <h2>Fleksibilitas Belajar</h2>
             <p>
               Belajar di Edura itu super fleksibel! Mau belajar pagi, siang,
@@ -90,7 +268,8 @@
             </p>
           </article>
 
-          <article class="unggulan-card">
+          <article class="keunggulan-card">
+            <img src="img/mdi_people.svg" alt="Kurikulum" loading="lazy" />
             <h2>Mentor Berpengalaman</h2>
             <p>
               Siap-siap belajar dari yang terbaik! Di Edura, kamu akan dibimbing
@@ -100,7 +279,12 @@
             </p>
           </article>
 
-          <article class="unggulan-card">
+          <article class="keunggulan-card">
+            <img
+              src="img/mdi_class-lesson.svg"
+              alt="Kurikulum"
+              loading="lazy"
+            />
             <h2>Kelas Tatap Muka untuk Pengalaman Belajar Lebih Baik</h2>
             <p>
               Mau pengalaman belajar yang lebih nyata? Edura juga punya kelas
@@ -109,6 +293,149 @@
               seru dan interaktif. Cocok banget buat kamu yang suka belajar
               dengan bertemu langsung dengan mentor dan teman-teman sekelas.
             </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Testimoni -->
+      <section id="testimoni-head">
+        <h1 style="color: #f7f7f7; text-align: center; margin: 50px 0px">
+          Apa kata mereka tentang Edura?
+        </h1>
+
+        <div class="grid-col-4">
+          <article class="card-testimoni">
+            <img
+              src="img/testimoni/Frame 17.png"
+              alt="testimoni"
+              class="card-testimoni-image"
+              loading="lazy"
+            />
+            <div class="card-testimoni-paragraph">
+              <p>
+                "Instruktur di Edura benar-benar berpengalaman dan selalu siap
+                membantu. Materinya sangat aplikatif dan bisa langsung
+                dipraktikkan di dunia kerja."
+              </p>
+              <h3>Andi, Software Engineering</h3>
+            </div>
+          </article>
+
+          <article class="card-testimoni">
+            <img
+              src="img/testimoni/Frame 18.png"
+              alt="testimoni"
+              class="card-testimoni-image"
+              loading="lazy"
+            />
+            <div class="card-testimoni-paragraph">
+              <p>
+                "Kurikulum Edura benar-benar mengikuti perkembangan teknologi
+                terbaru. Setelah mengikuti kelas, saya langsung merasa percaya
+                diri untuk mengambil proyek web sendiri."
+              </p>
+              <h3>Dina, Web Development</h3>
+            </div>
+          </article>
+
+          <article class="card-testimoni">
+            <img
+              src="img/testimoni/Frame 19.png"
+              alt="testimoni"
+              class="card-testimoni-image"
+              loading="lazy"
+            />
+            <div class="card-testimoni-paragraph">
+              <p>
+                "Belajar di Edura sangat menyenangkan! Proses pengembangan game
+                yang awalnya rumit, menjadi lebih mudah dipahami dan aplikatif."
+              </p>
+              <h3>Ray, Game Development</h3>
+            </div>
+          </article>
+
+          <article class="card-testimoni">
+            <img
+              src="img/testimoni/Frame 20.png"
+              alt="testimoni"
+              class="card-testimoni-image"
+              loading="lazy"
+            />
+            <div class="card-testimoni-paragraph">
+              <p>
+                "Kelas AI di Edura sangat mendalam, tapi tetap bisa diikuti
+                meskipun saya baru memulai. Sekarang saya lebih memahami cara
+                kerja machine learning."
+              </p>
+              <h3>Axel, AI Scientist</h3>
+            </div>
+          </article>
+
+          <article class="card-testimoni">
+            <img
+              src="img/testimoni/Frame 21.png"
+              alt="testimoni"
+              class="card-testimoni-image"
+              loading="lazy"
+            />
+            <div class="card-testimoni-paragraph">
+              <p>
+                "Edura membantu saya memahami bagaimana melindungi sistem dari
+                serangan siber. Ini pengalaman yang sangat berguna bagi karier
+                saya di dunia IT."
+              </p>
+              <h3>Fina, Cyber Security</h3>
+            </div>
+          </article>
+
+          <article class="card-testimoni">
+            <img
+              src="img/testimoni/Frame 22.png"
+              alt="testimoni"
+              class="card-testimoni-image"
+              loading="lazy"
+            />
+            <div class="card-testimoni-paragraph">
+              <p>
+                "Saya suka bagaimana Edura mengajarkan konsep dasar hingga
+                teknologi paling canggih. Pengalaman belajarnya sangat praktis
+                dan tidak membosankan."
+              </p>
+              <h3>Alex, Web Development</h3>
+            </div>
+          </article>
+
+          <article class="card-testimoni">
+            <img
+              src="img/testimoni/Frame 23.png"
+              alt="testimoni"
+              class="card-testimoni-image"
+              loading="lazy"
+            />
+            <div class="card-testimoni-paragraph">
+              <p>
+                "Materinya lengkap dan relevan dengan kebutuhan industri. Edura
+                sangat membantu saya mengembangkan keterampilan pemrograman
+                tingkat lanjut."
+              </p>
+              <h3>Joy, Software Engineering</h3>
+            </div>
+          </article>
+
+          <article class="card-testimoni">
+            <img
+              src="img/testimoni/Frame 24.png"
+              alt="testimoni"
+              class="card-testimoni-image"
+              loading="lazy"
+            />
+            <div class="card-testimoni-paragraph">
+              <p>
+                "Sangat memuaskan belajar di Edura! Penjelasan tentang AI sangat
+                detail dan mudah dipahami, bahkan bagi pemula seperti saya."
+              </p>
+              <h3>Aji, AI Scientist</h3>
+            </div>
           </article>
         </div>
       </section>
