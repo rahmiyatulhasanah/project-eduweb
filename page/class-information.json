@@ -1,0 +1,213 @@
+[
+    {
+        "id": "software-engineer",
+        "class_name": "Software Engineer",
+        "description": "Pengen jadi jago bikin aplikasi yang keren dan multifungsi? Learning path Software Engineer di Edura pas banget buat kamu! Di sini, kamu bakal belajar semua hal mulai dari dasar-dasar coding sampai bikin software yang bisa dipakai jutaan orang. Jadi, siap-siap ngebangun aplikasi yang bikin hidup orang jadi lebih mudah!",
+        "details": {
+            "kurikulum": {
+                "Dasar-Dasar Pemrograman": [
+                    "Pelajari logika pemrograman dasar, penggunaan bahasa pemrograman populer, serta pengenalan struktur data dan algoritma."
+                ],
+                "Pengembangan Aplikasi Berbasis Web dan Mobile": [
+                    "Kuasai pengembangan front-end dan back-end aplikasi web, serta pengembangan aplikasi mobile menggunakan framework modern."
+                ],
+                "Desain dan Arsitektur Perangkat Lunak": [
+                    "Pahami prinsip OOP, desain pola perangkat lunak, dan arsitektur mikroservis untuk sistem terdistribusi yang skalabel."
+                ],
+                "Pengelolaan Basis Data": [
+                    "Pelajari penggunaan basis data relasional dan non-relasional serta cara mengoptimalkan performa query."
+                ],
+                "Pengembangan API dan Integrasi Sistem": [
+                    "Bangun dan integrasikan API dengan layanan eksternal, serta lakukan pengujian dan dokumentasi API."
+                ],
+                "DevOps dan Pengelolaan Proyek": [
+                    "Pelajari penerapan CI/CD, penggunaan Docker dan Kubernetes, serta kolaborasi proyek menggunakan Git."
+                ],
+                "Pengujian Perangkat Lunak (Testing)": [
+                    "Pahami berbagai jenis pengujian perangkat lunak serta penggunaan alat pengujian otomatis."
+                ],
+                "Final Project": [
+                    "Implementasikan semua keterampilan yang dipelajari dalam proyek perangkat lunak nyata dari awal hingga selesai."
+                ]
+            },
+            "durasi_program": {
+                "total_durasi": "6 bulan (24 minggu)",
+                "frekuensi": "2 kali per minggu",
+                "total_jam_belajar": "200+ jam",
+                "detail_sesi": "Setiap sesi berlangsung selama 3 jam dengan waktu tambahan untuk mentoring dan sesi konsultasi."
+            },
+            "fasilitas_yang_didapat": [
+                "Dukungan aplikasi pendukung selama masa kelas",
+                "Akses penuh ke modul pembelajaran online dan rekaman kelas",
+                "Konsultasi dan mentoring pribadi dengan pengajar",
+                "Sertifikat resmi dari Edura setelah menyelesaikan kursus",
+                "Akses ke jaringan alumni dan komunitas Edura untuk peluang karir",
+                "Dukungan penuh untuk pembuatan portofolio proyek akhir"
+            ]
+        }
+    },
+    {
+        "id": "web-developer",
+        "class_name": "Web Developer",
+        "description": "Mau jadi ahli dalam membangun situs web yang menarik dan fungsional? Learning path Web Development di Edura adalah pilihan yang tepat untukmu! Dalam kelas ini, kamu akan mempelajari segala hal tentang pembuatan situs web mulai dari desain antarmuka hingga pengembangan backend, serta memastikan situsmu siap digunakan oleh ribuan pengguna. Bersiaplah untuk menguasai teknologi web dan membuat proyek yang akan memikat hati banyak orang!",
+        "details": {
+            "kurikulum": {
+                "Dasar-Dasar Web Development": [
+                    "Pelajari dasar HTML, CSS, JavaScript, dan prinsip desain responsif serta UX/UI."
+                ],
+                "Front-End Development": [
+                    "Kuasai framework CSS dan JavaScript modern serta pengelolaan state dan API."
+                ],
+                "Back-End Development": [
+                    "Pelajari scripting server-side, manajemen basis data, dan pembangunan API RESTful."
+                ],
+                "Tools dan Teknologi Web": [
+                    "Gunakan Git, GitHub, serta alat pengembangan dan DevOps seperti Docker dan CI/CD."
+                ],
+                "Pengujian dan Optimasi": [
+                    "Pahami pengujian web, optimasi performa, SEO, dan keamanan situs web."
+                ],
+                "Final Project": [
+                    "Membangun situs web lengkap dengan penerapan seluruh keterampilan dalam satu proyek nyata."
+                ]
+            },
+            "durasi_program": {
+                "total_durasi": "4 bulan (16 minggu)",
+                "frekuensi": "2 kali per minggu",
+                "total_jam_belajar": "160+ jam",
+                "detail_sesi": "Setiap sesi berlangsung selama 3 jam dengan waktu tambahan untuk mentoring dan sesi konsultasi."
+            },
+            "fasilitas_yang_didapat": [
+                "Dukungan aplikasi pendukung selama masa kelas",
+                "Akses penuh ke modul pembelajaran online dan rekaman kelas",
+                "Konsultasi dan mentoring pribadi dengan pengajar",
+                "Sertifikat resmi dari Edura setelah menyelesaikan kursus",
+                "Akses ke jaringan alumni dan komunitas Edura untuk peluang karir",
+                "Dukungan penuh untuk pembuatan portofolio proyek akhir"
+            ]
+        }
+    },
+    {
+        "id": "game-developer",
+        "class_name": "Game Developer",
+        "description": "Pernah bermimpi menciptakan game yang seru dan menyenangkan? Kelas Game Developer di Edura adalah tempat yang tepat untuk mewujudkan impian tersebut! Dalam kelas ini, kamu akan belajar dari dasar hingga mahir dalam pengembangan game, mencakup desain, pemrograman, dan implementasi fitur-fitur canggih. Siapkan dirimu untuk membuat game yang bisa dinikmati oleh jutaan pemain di seluruh dunia!",
+        "details": {
+            "kurikulum": {
+                "Dasar-Dasar Game Development": [
+                    "Pelajari industri game, konsep dasar pemrograman game, dan penggunaan alat seperti Unity atau Unreal Engine."
+                ],
+                "Desain Game": [
+                    "Pahami prinsip desain game, mekanika permainan, serta pembuatan karakter, level, dan cerita game."
+                ],
+                "Pemrograman Game": [
+                    "Kuasai logika permainan, pemrograman grafis dan animasi, serta penerapan AI dalam game."
+                ],
+                "Multimedia dan Visual": [
+                    "Pelajari pembuatan aset game, teknik rendering, dan penggunaan efek khusus"
+                ],
+                "Pengujian dan Rilis Game": [
+                    "Optimalkan performa game, uji untuk berbagai platform, dan pahami proses rilis game."
+                ],
+                "Final Project": [
+                    "Kembangkan game lengkap dari konsep hingga implementasi dengan penerapan semua keterampilan yang dipelajari."
+                ]
+            },
+            "durasi_program": {
+                "total_durasi": "5 bulan (20 minggu)",
+                "frekuensi": "2 kali per minggu",
+                "total_jam_belajar": "180+ jam",
+                "detail_sesi": "Setiap sesi berlangsung selama 3 jam dengan waktu tambahan untuk mentoring dan sesi konsultasi."
+            },
+            "fasilitas_yang_didapat": [
+                "Dukungan aplikasi pendukung selama masa kelas",
+                "Akses penuh ke modul pembelajaran online dan rekaman kelas",
+                "Konsultasi dan mentoring pribadi dengan pengajar",
+                "Sertifikat resmi dari Edura setelah menyelesaikan kursus",
+                "Akses ke jaringan alumni dan komunitas Edura untuk peluang karir",
+                "Dukungan penuh untuk pembuatan portofolio proyek akhir"
+            ]
+        }
+    },
+    {
+        "id": "ai-scientist",
+        "class_name": "AI Scientist",
+        "description": "Tertarik dengan kecerdasan buatan dan ingin mengembangkan solusi berbasis AI yang inovatif? Kelas AI Scientist di Edura adalah pilihan tepat untuk kamu! Dalam kelas ini, kamu akan belajar berbagai teknik dan algoritma canggih dalam machine learning, deep learning, dan data science. Bersiaplah untuk mempelajari cara membangun model AI yang dapat memecahkan berbagai masalah kompleks dan membuat dampak nyata di dunia teknologi!",
+        "details": {
+            "kurikulum": {
+                "Dasar-Dasar AI dan Machine Learning": [
+                    "Pahami konsep AI, dasar-dasar machine learning, dan pengolahan data untuk fitur engineering."
+                ],
+                "Deep Learning": [
+                    "Pelajari arsitektur jaringan saraf dalam dan gunakan TensorFlow serta Keras untuk penerapan model AI."
+                ],
+                "Data Science dan Analisis Data": [
+                    "Kuasai analisis data eksploratif, statistik, serta alat analisis data seperti Pandas dan NumPy"
+                ],
+                "Modeling dan Pengembangan Algoritma AI": [
+                    "Pelajari pengembangan model AI, optimasi hyperparameter, dan integrasi model ke aplikasi."
+                ],
+                "Ethics dan Implikasi AI": [
+                    "Pahami pertimbangan etis, dampak sosial, serta regulasi terkait teknologi AI."
+                ],
+                "Final Project": [
+                    "Kembangkan solusi AI lengkap dari perancangan hingga implementasi dengan penerapan keterampilan yang telah dipelajari."
+                ]
+            },
+            "durasi_program": {
+                "total_durasi": "6 bulan (24 minggu)",
+                "frekuensi": "2 kali per minggu",
+                "total_jam_belajar": "200+ jam",
+                "detail_sesi": "Setiap sesi berlangsung selama 3 jam dengan waktu tambahan untuk mentoring dan sesi konsultasi."
+            },
+            "fasilitas_yang_didapat": [
+                "Dukungan aplikasi pendukung selama masa kelas",
+                "Akses penuh ke modul pembelajaran online dan rekaman kelas",
+                "Konsultasi dan mentoring pribadi dengan pengajar",
+                "Sertifikat resmi dari Edura setelah menyelesaikan kursus",
+                "Akses ke jaringan alumni dan komunitas Edura untuk peluang karir",
+                "Dukungan penuh untuk pembuatan portofolio proyek akhir"
+            ]
+        }
+    },
+    {
+        "id": "cyber-security",
+        "class_name": "Cyber Security",
+        "description": "Ingin melindungi sistem dan data dari ancaman cyber yang semakin kompleks? Kelas Cyber Security di Edura dirancang untuk membekali kamu dengan keterampilan dan pengetahuan untuk menjaga keamanan informasi dan jaringan. Dalam kelas ini, kamu akan mempelajari teknik-teknik terbaru dalam keamanan siber, mulai dari deteksi ancaman hingga mitigasi risiko. Bersiaplah untuk menjadi ahli dalam melindungi data dan infrastruktur kritis dari serangan cyber!",
+        "details": {
+            "kurikulum": {
+                "Dasar-Dasar Cyber Security": [
+                    "Pelajari konsep dasar keamanan jaringan, model ancaman, dan risiko keamanan siber."
+                ],
+                "Keamanan Jaringan": [
+                    "Kuasai arsitektur jaringan, VPN, firewall, serta pemantauan dan keamanan komunikasi protokol."
+                ],
+                "Keamanan Sistem dan Aplikasi": [
+                    "Pelajari pengamanan sistem operasi, keamanan aplikasi web, serta audit dan pengujian kerentanan."
+                ],
+                "Manajemen Keamanan dan Kepatuhan": [
+                    "Pahami strategi manajemen risiko, kepatuhan terhadap regulasi seperti GDPR, dan penanganan insiden."
+                ],
+                "Cryptography dan Teknik Perlindungan Data": [
+                    "Kuasai dasar-dasar kriptografi, manajemen kunci, dan teknik perlindungan data."
+                ],
+                "Final Project": [
+                    "Implementasikan strategi keamanan lengkap melalui simulasi dan penanganan insiden keamanan."
+                ]
+            },
+            "durasi_program": {
+                "total_durasi": "5 bulan (20 minggu)",
+                "frekuensi": "2 kali per minggu",
+                "total_jam_belajar": "180+ jam",
+                "detail_sesi": "Setiap sesi berlangsung selama 3 jam dengan waktu tambahan untuk mentoring dan sesi konsultasi."
+            },
+            "fasilitas_yang_didapat": [
+                "Dukungan aplikasi pendukung selama masa kelas",
+                "Akses penuh ke modul pembelajaran online dan rekaman kelas",
+                "Konsultasi dan mentoring pribadi dengan pengajar",
+                "Sertifikat resmi dari Edura setelah menyelesaikan kursus",
+                "Akses ke jaringan alumni dan komunitas Edura untuk peluang karir",
+                "Dukungan penuh untuk pembuatan portofolio proyek akhir"
+            ]
+        }
+    }
+]

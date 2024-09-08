@@ -6,13 +6,61 @@
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <link rel="icon" type="image/x-icon" href="/img/E.svg" />
     <title>Informasi Pelatihan</title>
+
+    <style>
+      .kelasinprogram {
+        padding: 15px 20px;
+        margin: 0px 0px 10px 0px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease;
+      }
+
+      .kelasinprogram:hover {
+        background-color: #8672ff;
+      }
+
+      .kelasinprogram:hover > .number {
+        color: #8672ff;
+        background-color: #f7f7f7;
+      }
+
+      .kelasinprogram:hover > .namakelasinprogram {
+        color: #f7f7f7;
+      }
+
+      .number {
+        background-color: #2e2b41;
+        color: #f7f7f7;
+        border-radius: 20px;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .namakelasinprogram {
+        transition: all 0.3s ease;
+        font-size: 18px;
+      }
+
+      p.label {
+        font-family: Poppins-LightItalic;
+        font-size: 12px;
+        color: #f7f7f7;
+      }
+    </style>
   </head>
 
   <body>
     <header></header>
 
     <main>
-      <!-- Program dan Informasi Pelatihan -->
       <div style="margin: 50px 0px">
         <h1 style="color: #f7f7f7; text-align: center">Alur Belajar</h1>
         <h3 style="color: #f7f7f7; text-align: center">
@@ -27,168 +75,234 @@
           border-style: solid;
           border-width: 1px;
           border-radius: 10px;
-          border-color: #8772ff00;
-          background-color: #8772ff00;
+          border-color: #8672ff00;
+          background-color: #8672ff00;
           padding: 0px;
         "
       >
-        <div class="card-class">
+        <div class="card-class" id="software-engineer">
           <h2 class="card-class-name">Software Engineer</h2>
           <img
             src="../img/coding 1.webp"
-            alt="Kelas AI"
+            alt="class image"
             class="card-class-image"
             loading="lazy"
           />
         </div>
 
-        <div class="card-class">
+        <div class="card-class" id="web-developer">
           <h2 class="card-class-name">Web Developer</h2>
           <img
             src="../img/framework.webp"
-            alt="Kelas AI"
+            alt="class image"
             class="card-class-image"
             loading="lazy"
           />
         </div>
 
-        <div class="card-class">
+        <div class="card-class" id="game-developer">
           <h2 class="card-class-name">Game Developer</h2>
           <img
             src="../img/game.webp"
-            alt="Kelas AI"
+            alt="class image"
             class="card-class-image"
             loading="lazy"
           />
         </div>
 
-        <div class="card-class">
+        <div class="card-class" id="ai-scientist">
           <h2 class="card-class-name">AI Scientist</h2>
           <img
             src="../img/AI.webp"
-            alt="Kelas AI"
+            alt="class image"
             class="card-class-image"
             loading="lazy"
           />
         </div>
 
-        <div class="card-class">
+        <div class="card-class" id="cyber-security">
           <h2 class="card-class-name">Cyber Security</h2>
           <img
             src="../img/cyber.webp"
-            alt="Kelas AI"
+            alt="class image"
             class="card-class-image"
             loading="lazy"
           />
         </div>
       </section>
 
-      <section>
-        
+      <section id="class-content">
+        <!-- konten harusnya muncul di sinii -->
       </section>
-
-      <!-- <section id="program-info">
-        <div class="program-container">
-          <div class="program-div1" id="soft-eng" style="color: #f7f7f7">
-            <article style="background-color: #8672ff">
-              <h2>Software Engineer</h2>
-              <div class="grid-col-3">
-                <label>80h+</label>
-                <label>6 modul</label>
-                <label>4.3</label>
-              </div>
-            </article>
-          </div>
-
-          <div class="program-div2" id="web-dev">
-            <article style="background-color: #c3b8ffb5">
-              <h2>Web Developer</h2>
-              <div class="grid-col-3">
-                <label>80h+</label>
-                <label>6 modul</label>
-                <label>4.3</label>
-              </div>
-            </article>
-          </div>
-
-          <div class="program-div3" id="game-dev">
-            <article style="background-color: #c3b8ffb5">
-              <h2>Game Developer</h2>
-              <div class="grid-col-3">
-                <label>80h+</label>
-                <label>6 modul</label>
-                <label>4.3</label>
-              </div>
-            </article>
-          </div>
-
-          <div class="program-div4" id="ai-sci">
-            <article style="background-color: #c3b8ffb5">
-              <h2>AI Scientist</h2>
-              <div class="grid-col-3">
-                <label>80h+</label>
-                <label>6 modul</label>
-                <label>4.3</label>
-              </div>
-            </article>
-          </div>
-
-          <div class="program-div5" id="cyber-sec">
-            <article style="background-color: #c3b8ffb5">
-              <h2>Cyber Security</h2>
-              <div class="grid-col-3">
-                <label>80h+</label>
-                <label>6 modul</label>
-                <label>4.3</label>
-              </div>
-            </article>
-          </div>
-
-          <div
-            class="program-div6"
-            style="border-radius: 10px; background-color: #f7f7f7"
-          >
-            <img
-              src="../img/coding 1.webp"
-              alt="Software Engineer"
-              style="
-                width: 100%;
-                height: 125px;
-                border-radius: 10px;
-                object-fit: cover;
-              "
-            />
-            <div style="padding: 40px; padding-top: 0px">
-              <h2>Software Engineer</h2>
-              <p>
-                Pengen jadi jago bikin aplikasi yang keren dan multifungsi?
-                Learning path Software Engineer di Edura pas banget buat kamu!
-                Di sini, kamu bakal belajar semua hal mulai dari dasar-dasar
-                coding sampai bikin software yang bisa dipakai jutaan orang.
-                Jadi, siap-siap ngebangun aplikasi yang bikin hidup orang jadi
-                lebih mudah!
-              </p>
-              <h3>Informasi Program</h3>
-              <ol>
-                <li>Pengenalan Pemrograman (Python, Java)</li>
-                <li>Struktur Data dan Algoritma</li>
-                <li>Pengembangan Aplikasi Berbasis Web</li>
-                <li>Pengembangan Aplikasi Mobile</li>
-                <li>Prinsip Rekayasa Perangkat Lunak</li>
-                <li>Proyek Akhir: Membangun Aplikasi Lengkap</li>
-              </ol>
-              <button onclick="window.location.href='/page/register.html';">
-                Daftar Sekarang!
-              </button>
-            </div>
-          </div>
-        </div>
-      </section> -->
     </main>
 
-    <!-- footer -->
     <footer></footer>
 
     <script src="../js/header_footer.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const classContent = document.getElementById("class-content");
+
+        fetch("/page/class-information.json")
+          .then((res) => {
+            if (!res.ok) {
+              throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+          })
+          .then((classInformation) => {
+            console.log("JSON Data:", classInformation);
+
+            const classCards = document.querySelectorAll(".card-class");
+
+            // Fungsi untuk menampilkan konten kelas
+            const displayClassContent = (selectedClass) => {
+              // Kosongkan konten sebelumnya
+              classContent.innerHTML = "";
+
+              if (selectedClass) {
+                // Buat elemen container untuk logo dan nama kelas
+                const classContainer = document.createElement("div");
+                classContainer.style.display = "flex"; // Menyusun elemen dalam satu baris
+                classContainer.style.alignItems = "center"; // Vertikal align ke tengah
+
+                // Buat elemen <img> untuk logo SVG
+                const logoElement = document.createElement("img");
+                logoElement.src = `/img/${selectedClass.id}.svg`; // Misal software-engineer.svg
+                logoElement.alt = `${selectedClass.class_name} logo`; // Alternatif teks
+                logoElement.style.width = "40px"; // Set ukuran logo
+                logoElement.style.marginRight = "10px"; // Jarak antara logo dan teks
+
+                // Buat elemen <h2> untuk nama kelas
+                const classNameElement = document.createElement("h2");
+                classNameElement.textContent = selectedClass.class_name;
+
+                // Tambahkan logo dan nama kelas ke dalam container
+                classContainer.appendChild(logoElement);
+                classContainer.appendChild(classNameElement);
+
+                // Tambahkan container ke dalam classContent
+                classContent.appendChild(classContainer);
+
+                // Cek apakah detail durasi program ada dalam JSON
+                if (
+                  selectedClass.details &&
+                  selectedClass.details.durasi_program
+                ) {
+                  const durasiProgramElement = document.createElement("p");
+                  durasiProgramElement.textContent = `Durasi: ${selectedClass.details.durasi_program.total_durasi}`;
+                  classContent.appendChild(durasiProgramElement);
+                }
+
+                // Cek apakah deskripsi kelas tersedia
+                if (selectedClass.description) {
+                  const descriptionElement = document.createElement("p");
+                  descriptionElement.textContent = selectedClass.description;
+                  classContent.appendChild(descriptionElement);
+                }
+
+                if (selectedClass.details && selectedClass.details.kurikulum) {
+                  const kurikulumTitleElement = document.createElement("h3");
+                  kurikulumTitleElement.textContent = "Kelas dalam Program Ini";
+                  classContent.appendChild(kurikulumTitleElement);
+
+                  // Buat div container dengan kelas 'grid-col-3'
+                  const kurikulumContainer = document.createElement("div");
+                  kurikulumContainer.classList.add("grid-col-3");
+
+                  // Gunakan Object.entries untuk iterasi objek kurikulum
+                  Object.entries(selectedClass.details.kurikulum).forEach(
+                    ([namaKelas, deskripsi], index) => {
+                      const kelasinprogramDiv = document.createElement("div");
+                      kelasinprogramDiv.classList.add("kelasinprogram");
+
+                      // Buat elemen nomor urut
+                      const numberElement = document.createElement("p");
+                      numberElement.classList.add("number");
+                      numberElement.textContent = index + 1;
+                      kelasinprogramDiv.appendChild(numberElement);
+
+                      // Buat elemen nama kelas
+                      const namaKelasElement = document.createElement("p");
+                      namaKelasElement.classList.add("namakelasinprogram");
+                      namaKelasElement.textContent = namaKelas; // Nama kelas diambil langsung
+                      kelasinprogramDiv.appendChild(namaKelasElement);
+
+                      // Buat elemen deskripsi kelas
+                      const labelElement = document.createElement("p");
+                      labelElement.classList.add("label");
+                      labelElement.textContent = deskripsi[0]; // Deskripsi pertama di dalam array
+                      kelasinprogramDiv.appendChild(labelElement);
+
+                      // Tambahkan setiap kurikulum ke dalam container 'grid-col-3'
+                      kurikulumContainer.appendChild(kelasinprogramDiv);
+                    }
+                  );
+
+                  // Tambahkan container kurikulum ke dalam classContent
+                  classContent.appendChild(kurikulumContainer);
+                }
+
+                // Cek apakah fasilitas yang didapat tersedia dalam detail
+                if (
+                  selectedClass.details &&
+                  selectedClass.details.fasilitas_yang_didapat
+                ) {
+                  const fasilitasTitleElement = document.createElement("h3");
+                  fasilitasTitleElement.textContent =
+                    "Fasilitas yang Akan Kamu Dapatkan";
+                  classContent.appendChild(fasilitasTitleElement);
+
+                  const fasilitasListElement = document.createElement("ol");
+                  selectedClass.details.fasilitas_yang_didapat.forEach(
+                    (fasilitas) => {
+                      const listItem = document.createElement("li");
+                      listItem.textContent = fasilitas; // Tambahkan fasilitas ke list
+                      fasilitasListElement.appendChild(listItem);
+                    }
+                  );
+                  classContent.appendChild(fasilitasListElement);
+                }
+
+                // Buat tombol untuk daftar
+                const daftarButton = document.createElement("button");
+                daftarButton.textContent = "Daftar Sekarang!";
+                daftarButton.addEventListener("click", () => {
+                  window.location.href = "/page/register.html";
+                });
+                classContent.appendChild(daftarButton);
+              } else {
+                const errorElement = document.createElement("p");
+                errorElement.textContent = "Class not found";
+                classContent.appendChild(errorElement);
+              }
+            };
+
+            // Tambahkan event listener untuk kartu program
+            classCards.forEach((card) => {
+              card.addEventListener("click", () => {
+                const selectedClass = classInformation.find(
+                  (info) => info.id === card.id
+                );
+
+                console.log("Selected Class:", selectedClass); // Debugging untuk melihat data kelas yang dipilih
+                displayClassContent(selectedClass);
+              });
+            });
+
+            // Secara default, tampilkan konten kelas "Software Engineer"
+            const defaultClass = classInformation.find(
+              (info) => info.id === "software-engineer"
+            );
+            if (defaultClass) {
+              displayClassContent(defaultClass);
+            }
+          })
+          .catch((error) =>
+            console.error("Error fetching class information:", error)
+          );
+      });
+    </script>
   </body>
 </html>
