@@ -1,11 +1,11 @@
-Tugas Minggu 1 Project-Based Internship
+Tugas Project-Based Internship
 
 Nama    : Rahmiyatul Hasanah YE
 Okupasi : Web Development
 Durasi  : 1 Bulan
 
 Tentang Tugas
-Pada tugas kali ini, saya akan membuat sebuah landing page untuk sebuah lembaga pelatihan fiktif bernama "Edura". Lembaga ini berfokus pada pelatihan kemampuan digital seperti rekayasa data, pengembangan website, rekayasa perangkat lunak, pengembangan aplikasi permainan, dan keamanan komputer.
+Pada tugas kali ini, saya akan membuat sebuah landing page untuk sebuah lembaga pelatihan fiktif bernama "Edura". Lembaga ini berfokus pada pelatihan kemampuan digital seperti Software Engineer, Web Development, Game Development, AI Scientist, dan Cyber Security.
 
 Dari susunan website yang diberikan pada penugasan, saya menilai akan lebih baik jika tiap bagian ditulis satu-per-satu dalam file kode HTML yang berbeda. Setiap website pada umumnya juga memiliki bagian navigasi, header, dan footer. Pada tugas ini, saya akan menaruh bagian header di dalam bagian navigasi seperti yang tergambarkan pada .png yang saya lampirkan bersama file tugas ini.
 
