@@ -110,7 +110,7 @@ h1.tengah {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  /* background-color: #8672FF; */
+  background-color: #8672FF;
   color: #f7f7f7;
   padding: 10px;
   margin: 0px;
@@ -122,7 +122,7 @@ h1.tengah {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 20px; /* Kecilkan ukuran icon panah */
+  font-size: 20px;
 }
 
 .swiper-button-prev:hover,
@@ -148,7 +148,7 @@ h1.tengah {
 .statsnumber::before {
   counter-reset: my-counter var(--num);
   content: counter(my-counter);
-  animation: count 5s ease-in forwards;
+  animation: count 20s ease-in forwards;
 }
 
 @keyframes count {

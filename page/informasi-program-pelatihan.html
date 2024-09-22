@@ -156,36 +156,28 @@
 
             const classCards = document.querySelectorAll(".card-class");
 
-            // Fungsi untuk menampilkan konten kelas
             const displayClassContent = (selectedClass) => {
-              // Kosongkan konten sebelumnya
               classContent.innerHTML = "";
 
               if (selectedClass) {
-                // Buat elemen container untuk logo dan nama kelas
                 const classContainer = document.createElement("div");
-                classContainer.style.display = "flex"; // Menyusun elemen dalam satu baris
-                classContainer.style.alignItems = "center"; // Vertikal align ke tengah
+                classContainer.style.display = "flex";
+                classContainer.style.alignItems = "center";
 
-                // Buat elemen <img> untuk logo SVG
                 const logoElement = document.createElement("img");
-                logoElement.src = `/img/${selectedClass.id}.svg`; // Misal software-engineer.svg
-                logoElement.alt = `${selectedClass.class_name} logo`; // Alternatif teks
-                logoElement.style.width = "40px"; // Set ukuran logo
-                logoElement.style.marginRight = "10px"; // Jarak antara logo dan teks
+                logoElement.src = `/img/${selectedClass.id}.svg`;
+                logoElement.alt = `${selectedClass.class_name} logo`;
+                logoElement.style.width = "40px";
+                logoElement.style.marginRight = "10px";
 
-                // Buat elemen <h2> untuk nama kelas
                 const classNameElement = document.createElement("h2");
                 classNameElement.textContent = selectedClass.class_name;
 
-                // Tambahkan logo dan nama kelas ke dalam container
                 classContainer.appendChild(logoElement);
                 classContainer.appendChild(classNameElement);
 
-                // Tambahkan container ke dalam classContent
                 classContent.appendChild(classContainer);
 
-                // Cek apakah detail durasi program ada dalam JSON
                 if (
                   selectedClass.details &&
                   selectedClass.details.durasi_program
@@ -195,7 +187,6 @@
                   classContent.appendChild(durasiProgramElement);
                 }
 
-                // Cek apakah deskripsi kelas tersedia
                 if (selectedClass.description) {
                   const descriptionElement = document.createElement("p");
                   descriptionElement.textContent = selectedClass.description;
@@ -207,44 +198,36 @@
                   kurikulumTitleElement.textContent = "Kelas dalam Program Ini";
                   classContent.appendChild(kurikulumTitleElement);
 
-                  // Buat div container dengan kelas 'grid-col-3'
                   const kurikulumContainer = document.createElement("div");
                   kurikulumContainer.classList.add("grid-col-3");
 
-                  // Gunakan Object.entries untuk iterasi objek kurikulum
                   Object.entries(selectedClass.details.kurikulum).forEach(
                     ([namaKelas, deskripsi], index) => {
                       const kelasinprogramDiv = document.createElement("div");
                       kelasinprogramDiv.classList.add("kelasinprogram");
 
-                      // Buat elemen nomor urut
                       const numberElement = document.createElement("p");
                       numberElement.classList.add("number");
                       numberElement.textContent = index + 1;
                       kelasinprogramDiv.appendChild(numberElement);
 
-                      // Buat elemen nama kelas
                       const namaKelasElement = document.createElement("p");
                       namaKelasElement.classList.add("namakelasinprogram");
-                      namaKelasElement.textContent = namaKelas; // Nama kelas diambil langsung
+                      namaKelasElement.textContent = namaKelas;
                       kelasinprogramDiv.appendChild(namaKelasElement);
 
-                      // Buat elemen deskripsi kelas
                       const labelElement = document.createElement("p");
                       labelElement.classList.add("label");
-                      labelElement.textContent = deskripsi[0]; // Deskripsi pertama di dalam array
+                      labelElement.textContent = deskripsi[0];
                       kelasinprogramDiv.appendChild(labelElement);
 
-                      // Tambahkan setiap kurikulum ke dalam container 'grid-col-3'
                       kurikulumContainer.appendChild(kelasinprogramDiv);
                     }
                   );
 
-                  // Tambahkan container kurikulum ke dalam classContent
                   classContent.appendChild(kurikulumContainer);
                 }
 
-                // Cek apakah fasilitas yang didapat tersedia dalam detail
                 if (
                   selectedClass.details &&
                   selectedClass.details.fasilitas_yang_didapat
@@ -258,14 +241,13 @@
                   selectedClass.details.fasilitas_yang_didapat.forEach(
                     (fasilitas) => {
                       const listItem = document.createElement("li");
-                      listItem.textContent = fasilitas; // Tambahkan fasilitas ke list
+                      listItem.textContent = fasilitas;
                       fasilitasListElement.appendChild(listItem);
                     }
                   );
                   classContent.appendChild(fasilitasListElement);
                 }
 
-                // Buat tombol untuk daftar
                 const daftarButton = document.createElement("button");
                 daftarButton.textContent = "Daftar Sekarang!";
                 daftarButton.addEventListener("click", () => {
@@ -279,19 +261,17 @@
               }
             };
 
-            // Tambahkan event listener untuk kartu program
             classCards.forEach((card) => {
               card.addEventListener("click", () => {
                 const selectedClass = classInformation.find(
                   (info) => info.id === card.id
                 );
 
-                console.log("Selected Class:", selectedClass); // Debugging untuk melihat data kelas yang dipilih
+                console.log("Selected Class:", selectedClass);
                 displayClassContent(selectedClass);
               });
             });
 
-            // Secara default, tampilkan konten kelas "Software Engineer"
             const defaultClass = classInformation.find(
               (info) => info.id === "software-engineer"
             );
