@@ -27,6 +27,6 @@ To facilitate the completion of this project:
   - Clean and Organized Code: HTML files are neatly separated based on the website’s structure to avoid clutter.
   - Professional Visuals: High-quality images enhance the visual appeal of the landing page.
 2. Credits
-  Photos: [Unsplash.com](https://unsplash.com)
-  ChatGPT: Assisted in drafting narratives for the fictional institution
+  - Photos: [Unsplash.com](https://unsplash.com)
+  - ChatGPT: Assisted in drafting narratives for the fictional institution
 3. This project is created solely for learning purposes and is part of a project-based internship assignment.
