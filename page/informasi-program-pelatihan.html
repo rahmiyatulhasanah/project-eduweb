@@ -4,57 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" type="text/css" href="../page/informasi-program.css" />
     <link rel="icon" type="image/x-icon" href="/img/E.svg" />
     <title>Informasi Pelatihan</title>
-
-    <style>
-      .kelasinprogram {
-        padding: 15px 20px;
-        margin: 0px 0px 10px 0px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        transition: all 0.3s ease;
-      }
-
-      .kelasinprogram:hover {
-        background-color: #8672ff;
-      }
-
-      .kelasinprogram:hover > .number {
-        color: #8672ff;
-        background-color: #f7f7f7;
-      }
-
-      .kelasinprogram:hover > .namakelasinprogram {
-        color: #f7f7f7;
-      }
-
-      .number {
-        background-color: #2e2b41;
-        color: #f7f7f7;
-        border-radius: 20px;
-        text-align: center;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        transition: all 0.3s ease;
-      }
-
-      .namakelasinprogram {
-        transition: all 0.3s ease;
-        font-size: 18px;
-      }
-
-      p.label {
-        font-family: Poppins-LightItalic;
-        font-size: 12px;
-        color: #f7f7f7;
-      }
-    </style>
   </head>
 
   <body>
@@ -134,6 +86,141 @@
       <section id="class-content">
         <!-- konten harusnya muncul di sinii -->
       </section>
+
+      <!-- Rincian dan Biaya Kelas -->
+      <section>
+        <h2>Rincian Durasi dan Biaya Kelas</h2>
+        <div>
+          <!-- Program Cards -->
+          <div style="display: flex; justify-content: space-between; gap: 15px">
+            <div
+              class="cardrincianprogram"
+              data-program="6 Bulan"
+              data-price="Rp 3.725.000"
+            >
+              <p style="font-size: 14px; font-weight: bold">Program 6 Bulan</p>
+              <p style="font-size: 18px">Rp 3.725.000</p>
+            </div>
+            <div
+              class="cardrincianprogram"
+              data-program="12 Bulan"
+              data-price="Rp 7.325.000"
+            >
+              <p style="font-size: 14px; font-weight: bold">Program 12 Bulan</p>
+              <p style="font-size: 18px">Rp 7.325.000</p>
+            </div>
+          </div>
+
+          <!-- Details Section -->
+          <div class="details">
+            <h3>Program dimulai</h3>
+            <p id="program-dates">04 Januari - 08 Juni 2025</p>
+
+            <h3>Metode</h3>
+            <p id="program-method">On Site atau Online</p>
+            <p id="program-requirements" style="margin: 0 0 10px; color: #888">
+              <i>*Minimum pelaksanaan kelas: 20 peserta</i>
+            </p>
+          </div>
+
+          <!-- Button Daftar -->
+          <div style="text-align: center; margin-top: 20px">
+            <button
+              style="font-size: 18px"
+              class="button-black"
+              onclick="window.open('/page/register.html', '_blank')"
+            >
+              Daftar Sekarang!
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20px"
+                viewBox="0 -960 960 960"
+                width="20px"
+                fill="#F7F7F7"
+              >
+                <path
+                  d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section>
+        <h2><i>Frequently Asked Question</i></h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              Siapa yang bisa mengikuti pelatihan di Edura?
+            </div>
+            <div class="faq-answer">
+              Siapapun bisa mengikuti pelatihan di Edura, baik pemula yang ingin
+              belajar dari dasar, maupun profesional yang ingin memperdalam
+              keterampilan mereka di bidang teknologi tertentu.
+            </div>
+          </div>
+          
+          <div>
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              Adakah perangkat atau tools khusus yang harus dipersiapkan oleh
+              peserta?
+            </div>
+            <div class="faq-answer">
+              Peserta wajib memiliki laptop untuk mengikuti program dikarenakan
+              pembelajaran dan pengerjaan tugas akan lebih mudah jika dikerjakan
+              menggunakan laptop. Untuk tools tambahan setiap okupasinya akan
+              menyesuaikan silabus dan arahan dari Instruktur.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              Apakah saya membutuhkan pengalaman sebelumnya untuk mengikuti kursus di Edura?
+            </div>
+            <div class="faq-answer">
+              Tidak perlu! Edura menyediakan kursus untuk semua level, mulai dari pemula hingga tingkat lanjut. Setiap kursus dilengkapi dengan penjelasan langkah demi langkah untuk memudahkan proses belajar.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              Bagaimana cara mendaftar di kursus Edura?
+            </div>
+            <div class="faq-answer">
+              Kamu bisa mendaftar melalui website kami. Cukup buat akun, pilih
+              kursus yang kamu inginkan, dan ikuti langkah pembayaran untuk
+              mulai belajar.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              Apakah saya mendapatkan sertifikat setelah menyelesaikan
+              pelatihan?
+            </div>
+            <div class="faq-answer">
+              Ya, setelah menyelesaikan kursus di Edura, kamu akan mendapatkan
+              sertifikat yang dapat digunakan untuk menambah kredibilitas
+              profesionalmu. Sertifikat ini dapat ditampilkan di profil LinkedIn
+              atau digunakan saat melamar pekerjaan.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              Bagaimana jika saya kesulitan memahami materi?
+            </div>
+            <div class="faq-answer">
+              Jangan khawatir! Kamu dapat mengulangi video pelatihan kapan saja, dan jika masih mengalami kesulitan, kamu bisa bertanya di forum komunitas atau menghubungi instruktur untuk mendapatkan bantuan.
+            </div>
+          </div>
+
+
+        </div>
+      </section>
     </main>
 
     <footer></footer>
@@ -143,146 +230,177 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const classContent = document.getElementById("class-content");
+        const cards = document.querySelectorAll(".card-class");
 
-        fetch("/page/class-information.json")
-          .then((res) => {
-            if (!res.ok) {
-              throw new Error(`HTTP error! Status: ${res.status}`);
-            }
-            return res.json();
-          })
-          .then((classInformation) => {
-            console.log("JSON Data:", classInformation);
+        cards.forEach((card) => {
+          card.addEventListener("click", () => {
+            const classId = card.id;
+            fetchClassInformation(classId);
+          });
+        });
 
-            const classCards = document.querySelectorAll(".card-class");
+        const urlParams = new URLSearchParams(window.location.search);
+        let classId = urlParams.get("id");
 
-            const displayClassContent = (selectedClass) => {
-              classContent.innerHTML = "";
+        if (!classId) {
+          classId = "software-engineer";
+        }
 
-              if (selectedClass) {
-                const classContainer = document.createElement("div");
-                classContainer.style.display = "flex";
-                classContainer.style.alignItems = "center";
-
-                const logoElement = document.createElement("img");
-                logoElement.src = `/img/${selectedClass.id}.svg`;
-                logoElement.alt = `${selectedClass.class_name} logo`;
-                logoElement.style.width = "40px";
-                logoElement.style.marginRight = "10px";
-
-                const classNameElement = document.createElement("h2");
-                classNameElement.textContent = selectedClass.class_name;
-
-                classContainer.appendChild(logoElement);
-                classContainer.appendChild(classNameElement);
-
-                classContent.appendChild(classContainer);
-
-                if (
-                  selectedClass.details &&
-                  selectedClass.details.durasi_program
-                ) {
-                  const durasiProgramElement = document.createElement("p");
-                  durasiProgramElement.textContent = `Durasi: ${selectedClass.details.durasi_program.total_durasi}`;
-                  classContent.appendChild(durasiProgramElement);
-                }
-
-                if (selectedClass.description) {
-                  const descriptionElement = document.createElement("p");
-                  descriptionElement.textContent = selectedClass.description;
-                  classContent.appendChild(descriptionElement);
-                }
-
-                if (selectedClass.details && selectedClass.details.kurikulum) {
-                  const kurikulumTitleElement = document.createElement("h3");
-                  kurikulumTitleElement.textContent = "Kelas dalam Program Ini";
-                  classContent.appendChild(kurikulumTitleElement);
-
-                  const kurikulumContainer = document.createElement("div");
-                  kurikulumContainer.classList.add("grid-col-3");
-
-                  Object.entries(selectedClass.details.kurikulum).forEach(
-                    ([namaKelas, deskripsi], index) => {
-                      const kelasinprogramDiv = document.createElement("div");
-                      kelasinprogramDiv.classList.add("kelasinprogram");
-
-                      const numberElement = document.createElement("p");
-                      numberElement.classList.add("number");
-                      numberElement.textContent = index + 1;
-                      kelasinprogramDiv.appendChild(numberElement);
-
-                      const namaKelasElement = document.createElement("p");
-                      namaKelasElement.classList.add("namakelasinprogram");
-                      namaKelasElement.textContent = namaKelas;
-                      kelasinprogramDiv.appendChild(namaKelasElement);
-
-                      const labelElement = document.createElement("p");
-                      labelElement.classList.add("label");
-                      labelElement.textContent = deskripsi[0];
-                      kelasinprogramDiv.appendChild(labelElement);
-
-                      kurikulumContainer.appendChild(kelasinprogramDiv);
-                    }
-                  );
-
-                  classContent.appendChild(kurikulumContainer);
-                }
-
-                if (
-                  selectedClass.details &&
-                  selectedClass.details.fasilitas_yang_didapat
-                ) {
-                  const fasilitasTitleElement = document.createElement("h3");
-                  fasilitasTitleElement.textContent =
-                    "Fasilitas yang Akan Kamu Dapatkan";
-                  classContent.appendChild(fasilitasTitleElement);
-
-                  const fasilitasListElement = document.createElement("ol");
-                  selectedClass.details.fasilitas_yang_didapat.forEach(
-                    (fasilitas) => {
-                      const listItem = document.createElement("li");
-                      listItem.textContent = fasilitas;
-                      fasilitasListElement.appendChild(listItem);
-                    }
-                  );
-                  classContent.appendChild(fasilitasListElement);
-                }
-
-                const daftarButton = document.createElement("button");
-                daftarButton.textContent = "Daftar Sekarang!";
-                daftarButton.addEventListener("click", () => {
-                  window.location.href = "/page/register.html";
-                });
-                classContent.appendChild(daftarButton);
-              } else {
-                const errorElement = document.createElement("p");
-                errorElement.textContent = "Class not found";
-                classContent.appendChild(errorElement);
+        function fetchClassInformation(classId) {
+          fetch("/page/class-information.json")
+            .then((res) => {
+              if (!res.ok) {
+                throw new Error(`HTTP error! Status: ${res.status}`);
               }
-            };
+              return res.json();
+            })
+            .then((classInformation) => {
+              console.log("JSON Data:", classInformation);
 
-            classCards.forEach((card) => {
-              card.addEventListener("click", () => {
-                const selectedClass = classInformation.find(
-                  (info) => info.id === card.id
-                );
+              // Cari kelas berdasarkan ID
+              const selectedClass = classInformation.find(
+                (info) => info.id === classId
+              );
 
-                console.log("Selected Class:", selectedClass);
-                displayClassContent(selectedClass);
-              });
+              displayClassContent(selectedClass);
+            })
+            .catch((error) => {
+              classContent.innerHTML = "<p>Error mengambil data kelas.</p>";
+              console.error(error);
             });
+        }
 
-            const defaultClass = classInformation.find(
-              (info) => info.id === "software-engineer"
-            );
-            if (defaultClass) {
-              displayClassContent(defaultClass);
+        fetchClassInformation(classId);
+
+        const displayClassContent = (selectedClass) => {
+          classContent.innerHTML = "";
+
+          if (selectedClass) {
+            const classContainer = document.createElement("div");
+            classContainer.style.display = "flex";
+            classContainer.style.alignItems = "center";
+
+            const logoElement = document.createElement("img");
+            logoElement.src = `/img/${selectedClass.id}.svg`;
+            logoElement.alt = `${selectedClass.class_name} logo`;
+            logoElement.style.width = "40px";
+            logoElement.style.marginRight = "10px";
+
+            const classNameElement = document.createElement("h2");
+            classNameElement.textContent = selectedClass.class_name;
+
+            classContainer.appendChild(logoElement);
+            classContainer.appendChild(classNameElement);
+
+            classContent.appendChild(classContainer);
+
+            if (selectedClass.description) {
+              const descriptionElement = document.createElement("p");
+              descriptionElement.textContent = selectedClass.description;
+              classContent.appendChild(descriptionElement);
             }
-          })
-          .catch((error) =>
-            console.error("Error fetching class information:", error)
-          );
+
+            if (selectedClass.details && selectedClass.details.kurikulum) {
+              const kurikulumTitleElement = document.createElement("h3");
+              kurikulumTitleElement.textContent = "Kelas dalam Program Ini";
+              classContent.appendChild(kurikulumTitleElement);
+
+              const kurikulumContainer = document.createElement("div");
+              kurikulumContainer.classList.add("grid-col-3");
+
+              Object.entries(selectedClass.details.kurikulum).forEach(
+                ([namaKelas, deskripsi], index) => {
+                  const kelasinprogramDiv = document.createElement("div");
+                  kelasinprogramDiv.classList.add("kelasinprogram");
+
+                  const numberElement = document.createElement("p");
+                  numberElement.classList.add("number");
+                  numberElement.textContent = index + 1;
+                  kelasinprogramDiv.appendChild(numberElement);
+
+                  const namaKelasElement = document.createElement("p");
+                  namaKelasElement.classList.add("namakelasinprogram");
+                  namaKelasElement.textContent = namaKelas;
+                  kelasinprogramDiv.appendChild(namaKelasElement);
+
+                  const labelElement = document.createElement("p");
+                  labelElement.classList.add("label");
+                  labelElement.textContent = deskripsi[0];
+                  kelasinprogramDiv.appendChild(labelElement);
+
+                  kurikulumContainer.appendChild(kelasinprogramDiv);
+                }
+              );
+
+              classContent.appendChild(kurikulumContainer);
+            }
+
+            if (
+              selectedClass.details &&
+              selectedClass.details.fasilitas_yang_didapat
+            ) {
+              const fasilitasTitleElement = document.createElement("h3");
+              fasilitasTitleElement.textContent =
+                "Fasilitas yang Akan Kamu Dapatkan";
+              classContent.appendChild(fasilitasTitleElement);
+
+              const fasilitasListElement = document.createElement("ol");
+              selectedClass.details.fasilitas_yang_didapat.forEach(
+                (fasilitas) => {
+                  const listItem = document.createElement("li");
+                  listItem.textContent = fasilitas;
+                  fasilitasListElement.appendChild(listItem);
+                }
+              );
+              classContent.appendChild(fasilitasListElement);
+            }
+          } else {
+            const errorElement = document.createElement("p");
+            errorElement.textContent = "Class not found";
+            classContent.appendChild(errorElement);
+          }
+        };
       });
+    </script>
+
+    <script>
+      const programCards = document.querySelectorAll(".cardrincianprogram");
+      const programDates = document.getElementById("program-dates");
+      const programMethod = document.getElementById("program-method");
+      const programRequirements = document.getElementById(
+        "program-requirements"
+      );
+
+      programCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          programCards.forEach((card) => card.classList.remove("active"));
+          card.classList.add("active");
+
+          const program = card.getAttribute("data-program");
+          const price = card.getAttribute("data-price");
+
+          programDates.textContent =
+            program === "6 Bulan"
+              ? "04 Januari - 08 Juni 2025"
+              : "04 Januari - 08 Desember 2025";
+
+          programMethod.textContent = "On Site atau Online";
+          programRequirements.textContent = `Harga: ${price} (Minimum 20 peserta)`;
+        });
+      });
+    </script>
+
+    <script>
+      function toggleAnswer(element) {
+        const answer = element.nextElementSibling;
+        if (answer.classList.contains("open")) {
+          answer.classList.remove("open");
+          element.classList.remove("active");
+        } else {
+          answer.classList.add("open");
+          element.classList.add("active");
+        }
+      }
     </script>
   </body>
 </html>

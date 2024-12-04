@@ -17,7 +17,7 @@
     </style>
   </head>
 
-  <body style="background-color: #8672FF">
+  <body style="background-color: #8672ff">
     <header></header>
 
     <main>
@@ -30,7 +30,9 @@
           text-align: center;
         "
       >
-        <h1 style="color: #f7f7f7; margin: 0px; text-align: center">Berita dan Artikel</h1>
+        <h1 style="color: #f7f7f7; margin: 0px; text-align: center">
+          Berita dan Artikel
+        </h1>
         <div>
           <button id="show-all">Semua</button>
           <button id="show-articles">Artikel</button>
@@ -47,6 +49,65 @@
 
     <script src="/js/header_footer.js"></script>
     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const articleContainer = document.getElementById("article-container");
+
+        fetch("../page/articles.json")
+          .then((res) => res.json())
+          .then((articles) => {
+            function articleHTML(article, index) {
+              return `
+                <article data-label="${article.label}">
+                  <p
+                    style="border-radius: 10px; padding: 5px 15px; margin: 10px 0px; width: 25%; border: 1px solid #8672FF; color: #8672FF; font-size: 12px; font-style: italic;">
+                    ${article.label}
+                  </p>
+                  <img src="${article.img}" alt="${article.alt}" class="pict" />
+                  <h2>${article.title}</h2>
+                  <p>${article.bridge}</p>
+                  <button class="button-article" data-index="${index}">Baca Selengkapnya</button></br>
+                </article>
+              `;
+            }
+
+            function displayArticles(filterLabel) {
+              articleContainer.innerHTML = "";
+
+              articles.forEach((article, index) => {
+                if (!filterLabel || article.label === filterLabel) {
+                  articleContainer.innerHTML += articleHTML(article, index);
+                }
+              });
+
+              const buttons = document.querySelectorAll(".button-article");
+              buttons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                  const articleIndex = event.target.getAttribute("data-index");
+                  localStorage.setItem(
+                    "selectedArticle",
+                    JSON.stringify(articles[articleIndex])
+                  );
+                  window.location.href = "../page/berita-artikel-page.html";
+                });
+              });
+            }
+
+            displayArticles();
+
+            document
+              .getElementById("show-all")
+              .addEventListener("click", () => displayArticles());
+            document
+              .getElementById("show-articles")
+              .addEventListener("click", () => displayArticles("Artikel"));
+            document
+              .getElementById("show-news")
+              .addEventListener("click", () => displayArticles("Berita"));
+          })
+          .catch((error) => console.error("Error fetching articles:", error));
+      });
+    </script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", () => {
         const articleContainer = document.getElementById("article-container");
 
@@ -72,7 +133,7 @@
             </p>
             <img src="${article.img}" alt="${article.alt}" class="pict" />
             <h2>${article.title}</h2>
-            <p>${article.content}</p>
+            <p>${article.bridge}</p>
             <button class="button-article">Baca Selengkapnya</button></br>
           </article>
         `;
@@ -106,10 +167,10 @@
                 .addEventListener("click", () => displayArticles("Berita"));
             }
 
-            addEventListeners();
+            addEventListener();
           })
           .catch((error) => console.error("Error fetching articles:", error));
       });
-    </script>
+    </script> -->
   </body>
 </html>

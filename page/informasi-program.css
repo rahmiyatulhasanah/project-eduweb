@@ -1,0 +1,124 @@
+.kelasinprogram {
+  padding: 15px 20px;
+  margin: 0px 0px 10px 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  /* border: 1px solid #ddd;
+    border-radius: 8px; */
+}
+
+.kelasinprogram:hover {
+  background-color: #8672ff;
+}
+
+.kelasinprogram:hover > .number {
+  color: #8672ff;
+  background-color: #f7f7f7;
+}
+
+.kelasinprogram:hover > .namakelasinprogram {
+  color: #f7f7f7;
+}
+
+.number {
+  background-color: #2e2b41;
+  color: #f7f7f7;
+  border-radius: 20px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.namakelasinprogram {
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+p.label {
+  font-family: Poppins-LightItalic;
+  font-size: 12px;
+  color: #f7f7f7;
+}
+
+.cardrincianprogram {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cardrincianprogram:hover {
+  background-color: #8672ff;
+}
+
+.cardrincianprogram:hover > p {
+  color: #f7f7f7;
+}
+
+.active {
+  background-color: #e3d7ff;
+  border: 2px solid #7c4dff;
+}
+.details {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.faq-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-question {
+  background-color: #f7f7f7;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #8672ff;
+  font-family: Poppins-Bold;
+  color: #f7f7f7;
+}
+
+.faq-question.active {
+  background-color: #8672ff;
+  color: #f7f7f7;
+  font-family: Poppins-Bold;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.faq-answer.open {
+  max-height: 500px;
+  padding: 10px;
+}

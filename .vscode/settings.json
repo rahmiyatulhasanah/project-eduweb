@@ -1,7 +1,9 @@
 {
     "cSpell.words": [
-        "Edura"
+        "Edura",
+        "kelasinprogram",
+        "namakelasinprogram"
     ],
     "svg.preview.background": "transparent",
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5502
 }
