@@ -23,9 +23,9 @@ To facilitate the completion of this project:
 
 ## Others
 1. Project Highlights
-  Dynamic Content Structure: Each section of the website is designed to stand alone for easier readability and maintenance.
-  Clean and Organized Code: HTML files are neatly separated based on the website’s structure to avoid clutter.
-  Professional Visuals: High-quality images enhance the visual appeal of the landing page.
+  - Dynamic Content Structure: Each section of the website is designed to stand alone for easier readability and maintenance.
+  - Clean and Organized Code: HTML files are neatly separated based on the website’s structure to avoid clutter.
+  - Professional Visuals: High-quality images enhance the visual appeal of the landing page.
 2. Credits
   Photos: [Unsplash.com](https://unsplash.com)
   ChatGPT: Assisted in drafting narratives for the fictional institution
