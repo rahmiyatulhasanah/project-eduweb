@@ -21,12 +21,16 @@ To facilitate the completion of this project:
 - I used **ChatGPT** to draft narratives about this fictional institution, ensuring all code and programming tasks were written manually.  
 - Photos were sourced from [Unsplash.com](https://unsplash.com), a platform for high-quality, royalty-free images.  
 
-## Others  
-1. Project Highlights
+## Getting Started  
+Follow the steps below to set up and view the project:  
+1. Clone this repository:  
+   ```bash  
+   git clone <repository-link>
+   ```
+2. Project Highlights
   Dynamic Content Structure: Each section of the website is designed to stand alone for easier readability and maintenance.
   Clean and Organized Code: HTML files are neatly separated based on the website’s structure to avoid clutter.
   Professional Visuals: High-quality images enhance the visual appeal of the landing page.
-2. Credits
-  Photos: [Unsplash.com](https://unsplash.com)
+3. Credits
+  Photos: Unsplash.com
   ChatGPT: Assisted in drafting narratives for the fictional institution
-3. This project is created solely for learning purposes and is part of a project-based internship assignment.
